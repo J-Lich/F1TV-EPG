@@ -4,7 +4,7 @@
 
 A Python script to fetch the complete F1TV event schedule and generate a standards-compliant XMLTV file (`.xml`) for use as an Electronic Program Guide (EPG) in IPTV systems.
 
-This project is a modification of an original script written by ![Plebster on Gitlab](https://gitlab.com/Plebster/f1tv/-/tree/main?ref_type=heads) designed to create `.ics` calendar files. It has been repurposed to serve the IPTV community by generating a guide that can be imported into EPG-aware clients like PVRs and media centers.
+This project is a modification of an original script written by [Plebster on Gitlab](https://gitlab.com/Plebster/f1tv/) designed to create `.ics` calendar files. It has been repurposed to serve the IPTV community by generating a guide that can be imported into EPG-aware clients like PVRs and media centers.
 
 ## Key Features
 
@@ -24,7 +24,7 @@ The key changes from the original concept are:
 -   **User Input:** Command-line argument parsing (`argparse`) was added to allow users to easily customize the channel ID, name, and output file without editing the code.
 -   **Focus:** The goal shifted from personal calendar management to providing a functional EPG source for media systems.
 
-# EPG Source Link ![LINK TO EPG](https://google.com)
+# EPG Source Link: [https://raw.githubusercontent.com/J-Lich/F1TV-EPG/refs/heads/main/guide.xml](https://raw.githubusercontent.com/J-Lich/F1TV-EPG/refs/heads/main/guide.xml)
 
 ## Usage
 
@@ -55,6 +55,7 @@ python f1tv_epg.py --id "MyF1" --name "My Formula 1 Channel" --output "/path/to/
 ## Example Output (guide.xml)
 The generated XML file will have the following structure:
 
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <tv generator-info-name="F1TV EPG Generator">
   <channel id="f1tv">
@@ -72,6 +73,7 @@ The generated XML file will have the following structure:
   </programme>
   <!-- ... more events ... -->
 </tv>
+```
 
 ## Dependencies
 - requests
